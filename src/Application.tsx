@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, RouteComponentProps, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, RouteComponentProps, Switch, Redirect } from 'react-router-dom';
+import { auth } from './config/firebase';
 import routes from './config/routes';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 export const Application: React.FC<Props> = (props) => {
+
     return (
         <div>
             <Router>
